@@ -1,0 +1,42 @@
+{
+  "name": "trailpack-archetype",
+  "version": "0.0.0",
+  "description": "Footprints Trailpack",
+  "homepage": "https://github.com/trailsjs/trailpack-footprints",
+  "author": {
+    "name": "trailsjs",
+    "email": "hello@trailsjs.io",
+    "url": "trailsjs.io"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "trailpack",
+    "trails",
+    "trailjs"
+  ],
+  "dependencies": {
+    "trailpack": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^2.0.0-beta.1",
+    "eslint-config-trails": "^1.0.1",
+    "mocha": "^2.3"
+  },
+  "bundledDependencies": [
+    "trailpack"
+  ],
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "git@github.com:trailsjs/trailpack-footprints.git",
+  "license": "MIT"
+}
