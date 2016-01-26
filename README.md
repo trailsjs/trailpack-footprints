@@ -10,7 +10,81 @@ other trailpacks such as [trailpack-waterline](https://github.com/trailsjs/trail
 and [trailpack-knex](https://github.com/trailsjs/trailpack-knex) implement,
 as well as a suite of tests that Footprint implementations should pass.
 
-[![Trails Footprints Diagram][diagram-image]][]
+![Trails Footprints Diagram][diagram-image]
+
+## Install
+
+```sh
+$ npm install --save trailpack-footprints
+```
+
+## Configure
+
+```js
+// config/trailpack.js
+module.exports = {
+  packs: [
+    // ... other trailpacks
+    require('trailpack-footprints')
+  ]
+}
+```
+
+```js
+// config/footprints.js
+module.exports = {
+  /**
+   * Generate routes for controller handlers.
+   */
+  controllers: true,
+
+  /**
+   * Generate conventional Create, Read, Update, and Delete (CRUD) routes for
+   * each Model.
+   */
+  models: {
+    options: {
+
+      /**
+       * The max number of objects to return by default. Can be overridden in
+       * the request using the ?limit argument.
+       */
+      defaultLimit: 100,
+
+      /**
+       * Subscribe to changes on requested models via WebSocket
+       * (support provided by trailpack-websocket)
+       */
+      watch: false,
+
+      /**
+       * Whether to populate all model associations by default (for "find")
+       */
+      populate: true
+    },
+
+    actions: {
+      create: true,
+      find: true,
+      update: true,
+      destroy: true,
+
+      /**
+       * Specify which "association" endpoints to activate.
+       */
+      createAssociation: true,
+      findAssociation: true,
+      updateAssociation: true,
+      destroyAssociation: true
+    }
+  },
+
+  /**
+   * Prefix your footprint route paths
+   */
+  prefix: '/api/v1'
+}
+```
 
 ## API
 
