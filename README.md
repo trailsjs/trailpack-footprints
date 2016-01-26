@@ -133,11 +133,44 @@ The purpose of `FootprintService` is to transform and forward queries to the dat
 
 #### `createAssociation (parentModelName, parentId, childAttributeName, values, [options])`
 
+| param | required? | description | example |
+|:---|:---|:---|:---|
+| `parentModelName` | Yes | The name of the parent model | `User`
+| `parentId` | Yes | The id of the parent model | `1`
+| `childAttributeName` | Yes | The name of the attribute to create and associate with the parent | `roles`
+| `values` | Yes | An object containing the values to create | `{ name: 'adminRole' }`
+| `options` | No | Datastore-specific options |
+
 #### `findAssociation (parentModelName, parentId, childAttributeName, criteria, [options])`
+
+| param | required? | description | example |
+|:---|:---|:---|:---|
+| `parentModelName` | Yes | The name of the parent model | `User`
+| `parentId` | Yes | The id of the parent model | `1`
+| `childAttributeName` | Yes | The name of the attribute to create and associate with the parent | `roles`
+| `criteria` | Yes | An object containing the criteria to search on, or an id | `{ name: 'adminRole' }`
+| `options` | No | Datastore-specific options |
 
 #### `updateAssociation (parentModelName, parentId, childAttributeName, criteria, values, [options])`
 
+| param | required? | description | example |
+|:---|:---|:---|:---|
+| `parentModelName` | Yes | The name of the parent model | `User`
+| `parentId` | Yes | The id of the parent model | `1`
+| `childAttributeName` | Yes | The name of the attribute to create and associate with the parent | `roles`
+| `criteria` | Yes | An object containing the criteria to search on, or an id | `{ name: 'adminRole' }`
+| `values` | Yes | An object containing the values to update | `{ name: 'adminRole' }`
+| `options` | No | Datastore-specific options |
+
 #### `destroyAssociation (parentModelName, parentId, childAttributeName, criteria, [options])`
+
+| param | required? | description | example |
+|:---|:---|:---|:---|
+| `parentModelName` | Yes | The name of the parent model | `User`
+| `parentId` | Yes | The id of the parent model | `1`
+| `childAttributeName` | Yes | The name of the attribute to destroy and dissociate from the parent | `roles`
+| `criteria` | Yes | An object containing the criteria to search on, or an id | `{ name: 'adminRole' }`
+| `options` | No | Datastore-specific options |
 
 ### `api.controllers.FootprintController`
 
