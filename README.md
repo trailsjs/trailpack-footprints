@@ -1,5 +1,6 @@
 # trailpack-footprints
 
+[![Gitter][gitter-image]][gitter-url]
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
@@ -12,6 +13,10 @@ as well as a suite of tests that Footprint implementations should pass.
 
 ![Trails Footprints Diagram][diagram-image]
 
+## What are Footprints?
+
+Footprints automatically generate easy-to-use RESTful endpoints for your models.
+
 ## Install
 
 ```sh
@@ -21,7 +26,7 @@ $ npm install --save trailpack-footprints
 ## Configure
 
 ```js
-// config/trailpack.js
+// config/main.js
 module.exports = {
   packs: [
     // ... other trailpacks
@@ -148,4 +153,6 @@ The purpose of the `FootprintController` is to transform and forward requests to
 [daviddm-url]: https://david-dm.org/trailsjs/trailpack-footprints
 [codeclimate-image]: https://img.shields.io/codeclimate/github/trailsjs/trailpack-footprints.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/trailsjs/trailpack-footprints
+[gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
+[gitter-url]: https://gitter.im/trailsjs/trails
 
