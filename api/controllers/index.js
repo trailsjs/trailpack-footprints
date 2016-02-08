@@ -1,1 +1,0 @@
-exports.FootprintController = require('./FootprintController')
