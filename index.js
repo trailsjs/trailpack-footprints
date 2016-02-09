@@ -12,15 +12,15 @@ module.exports = class FootprintsTrailpack extends Trailpack {
    * these are available and appear valid.
    */
   validate () {
-    this.enabled = true
+    this.modelFootprints = true
 
     if (!this.app.api.services.FootprintService) {
       this.log.warn('trailpack-footprints is installed, but FootprintService is not provided')
-      this.enabled = false
+      this.modelFootprints = false
     }
     if (!this.app.api.services.FootprintController) {
       this.log.warn('trailpack-footprints is installed, but FootprintController is not provided')
-      this.enabled = false
+      this.modelFootprints = false
     }
   }
 
@@ -51,10 +51,8 @@ module.exports = class FootprintsTrailpack extends Trailpack {
    *    Delete    | DELETE | /model/{id}/{child}/{id?}  | FootprintController.destroyAssociation
    */
   configure () {
-    if (!this.enabled) return
-
     const controllerFootprints = lib.Util.getControllerFootprints(this.app)
-    const modelFootprints = lib.util.getModelFootprints(this.app)
+    const modelFootprints = this.modelFootprints ? lib.util.getModelFootprints(this.app) : [ ]
 
     this.app.config.routes = _.union(this.app.config.routes, controllerFootprints, modelFootprints)
   }

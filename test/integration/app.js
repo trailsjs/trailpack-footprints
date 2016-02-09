@@ -3,14 +3,23 @@
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
 const Model = require('trails-model')
+const Controller = require('trails-controller')
+const Policy = require('trails-policy')
 
 module.exports = _.defaultsDeep({
   pkg: {
     name: 'footprints-trailpack-test'
   },
   api: {
+    policies: {
+      TestPolicy: class TestPolicy extends Policy {
+        test () { }
+      }
+    },
     controllers: {
-
+      TestController: class TestController extends Controller {
+        testHandler () { }
+      }
     },
     models: {
       User: class User extends Model {
@@ -47,12 +56,18 @@ module.exports = _.defaultsDeep({
   config: {
     main: {
       packs: [
+        require('../../'),
         smokesignals.Trailpack,
-        require('trailpack-core'),
         require('trailpack-router'),
-        require('../../') // trailpack-footprints
+        require('trailpack-core')
       ]
-    }
+    },
+    policies: {
+      TestController: {
+        testHandler: [ 'TestPolicy.test' ]
+      }
+    },
+    routes: [ ]
   }
 }, smokesignals.FailsafeConfig)
 

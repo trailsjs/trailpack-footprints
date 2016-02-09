@@ -1,5 +1,5 @@
 {
-  "name": "trailpack-archetype",
+  "name": "trailpack-footprints",
   "version": "0.0.0",
   "description": "Footprints Trailpack",
   "homepage": "https://github.com/trailsjs/trailpack-footprints",
@@ -30,7 +30,8 @@
     "trailpack-router": "^1.0.0-beta-1",
     "trails": "^1.0.0-alpha-8",
     "trails-controller": "^1.0.0-alpha-1",
-    "trails-model": "^1.0.0-alpha-7"
+    "trails-model": "^1.0.0-alpha-7",
+    "trails-policy": "^1.0.0"
   },
   "bundledDependencies": [
     "trailpack"
