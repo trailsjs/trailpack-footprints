@@ -13,7 +13,10 @@ describe('lib.Util', () => {
 
   describe('#getControllerHandler', () => {
     it('should correctly combine controller and handler', () => {
-      assert.equal(lib.Util.getControllerHandler('TestController', 'testHandler'), 'TestController.testHandler')
+      assert.equal(
+        lib.Util.getControllerHandler('TestController', 'testHandler'),
+        'TestController.testHandler'
+      )
     })
   })
 
