@@ -8,9 +8,6 @@
     "email": "hello@trailsjs.io",
     "url": "trailsjs.io"
   },
-  "files": [
-    "lib"
-  ],
   "main": "index.js",
   "keywords": [
     "trailpack",
