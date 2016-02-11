@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- '4'
+- stable
+
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/54f8a1e753f859f5ca1a
+    on_start: never
+    on_failure: change
+
+deploy:
+  provider: npm
+  email: hello@trailsjs.io
+  api_key:
+    secure: lRUByeOOzoFgy6tJ/6g6mOQo335OeNpirpBpp+eXaGLVad3CPjndp0YCU0lstU54EF139o/dInxZKOuMpMB/TKLrg3T/PetAwIqOPz4tfthbZXkb6RwnuOTAknZiqmAVpXlpg4Nugtwdpode0F2S6x1g06s2w/40OQAcghOkP4mv4fYJ6R512+g6Qh8S4uBFo7L2Rbgu8+8gHV77xIazswyrljdFJcxnsHWbumM2/TLtjzVujYF0qDTMX9kFvTMb6pRNbaS+3vofZ8zJjoq9AuhshTrF3KmTcK2GSFOYmYXdMQnMMuSybbEFd33eFwSdrfzpFWaIhXpXIQ/7zsT9QUhNmc1IEKO5d0sbiP41V4lxioXzYhV86pohudPCwm6e2PW1dcoMS0V+oSEN7iF0u35PBLtALf3Z5+LGH99MrSMMSGVQWuRvnOm6MV/duKWzJPxHw9gwn5ZH8fD9srqrViIsS/2dDIxQHyUrPnYKU2M3aiXXrc6JCLXeHRU5l2Xce5vlOlKPbJXLmkep2oZ1XE2IcewAfjuS9SXI1RBIrmfvKMJ74b3Xvihpw+w/x6VURGeO4el/bvMK/omqD1U995VUQsjlWQeKZQOLLqf4g8aSU+FLYA5drWKhw6EMmrZBgQ7V346IOMrTXZgXCeOueD8FKEokIvDRIikbPIsQhTg=
+  on:
+    tags: true
+    repo: trailsjs/trailpack-footprints
+    node: stable
