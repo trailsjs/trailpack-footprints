@@ -51,10 +51,13 @@ module.exports = class FootprintsTrailpack extends Trailpack {
    *    Delete    | DELETE | /model/{id}/{child}/{id?}  | FootprintController.destroyAssociation
    */
   configure () {
+    const routerUtil = this.app.packs.router.util
     const controllerFootprints = lib.Util.getControllerFootprints(this.app)
     const modelFootprints = this.modelFootprints ? lib.util.getModelFootprints(this.app) : [ ]
 
-    this.app.config.routes = _.union(this.app.config.routes, controllerFootprints, modelFootprints)
+    const footprintRoutes = _.union(controllerFootprints, modelFootprints)
+
+    this.app.config.routes = routerUtil.mergeRoutes(footprintRoutes, this.app.config.routes)
   }
 
   constructor (app) {

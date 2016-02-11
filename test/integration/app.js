@@ -67,7 +67,13 @@ module.exports = _.defaultsDeep({
         testHandler: [ 'TestPolicy.test' ]
       }
     },
-    routes: [ ]
+    routes: [
+      {
+        method: 'GET',
+        path: '/test/testHandler',
+        handler: 'TestController.testHandler'
+      }
+    ]
   }
 }, smokesignals.FailsafeConfig)
 

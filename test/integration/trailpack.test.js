@@ -10,6 +10,7 @@ describe('Router Trailpack', () => {
       const routes = global.app.routes
 
       assert.equal(routes.length, 1)
+      assert.equal(routes[0].method, 'GET')
     })
     it('should bind route handler to controller method', () => {
       const routes = global.app.routes
