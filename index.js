@@ -18,7 +18,7 @@ module.exports = class FootprintsTrailpack extends Trailpack {
       this.log.warn('trailpack-footprints is installed, but FootprintService is not provided')
       this.modelFootprints = false
     }
-    if (!this.app.api.services.FootprintController) {
+    if (!this.app.api.controllers.FootprintController) {
       this.log.warn('trailpack-footprints is installed, but FootprintController is not provided')
       this.modelFootprints = false
     }
@@ -53,7 +53,7 @@ module.exports = class FootprintsTrailpack extends Trailpack {
   configure () {
     const routerUtil = this.app.packs.router.util
     const controllerFootprints = lib.Util.getControllerFootprints(this.app)
-    const modelFootprints = this.modelFootprints ? lib.util.getModelFootprints(this.app) : [ ]
+    const modelFootprints = this.modelFootprints ? lib.Util.getModelFootprints(this.app) : [ ]
 
     const footprintRoutes = _.union(controllerFootprints, modelFootprints)
 

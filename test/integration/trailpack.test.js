@@ -6,11 +6,17 @@ const assert = require('assert')
 describe('Router Trailpack', () => {
 
   describe('#initialize', () => {
-    it('should include footprint routes in app.routes', () => {
+    it('should include footprint routes (Controllers) in app.routes', () => {
       const routes = global.app.routes
 
-      assert.equal(routes.length, 1)
-      assert.equal(routes[0].method, 'GET')
+      assert.equal(routes.length, 3)
+      assert(_.find(routes, { path: '/test/testHandler' }))
+    })
+    it('should include footprint routes (Models) in app.routes', () => {
+      const routes = global.app.routes
+
+      assert.equal(routes.length, 3)
+      assert(_.find(routes, { path: '/{model}', method: 'POST' }))
     })
     it('should bind route handler to controller method', () => {
       const routes = global.app.routes
@@ -20,7 +26,9 @@ describe('Router Trailpack', () => {
     it('should attach prerequisite methods', () => {
       const routes = global.app.routes
 
-      assert(_.isFunction(routes[0].config.pre[0]))
+      const configRoute = _.find(routes, { path: '/test/testHandler' })
+
+      assert(_.isFunction(configRoute.config.pre[0]))
     })
   })
 })

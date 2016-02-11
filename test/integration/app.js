@@ -11,6 +11,11 @@ module.exports = _.defaultsDeep({
     name: 'footprints-trailpack-test'
   },
   api: {
+    services: {
+      FootprintService: class FootprintService extends Controller {
+
+      }
+    },
     policies: {
       TestPolicy: class TestPolicy extends Policy {
         test () { }
@@ -19,6 +24,10 @@ module.exports = _.defaultsDeep({
     controllers: {
       TestController: class TestController extends Controller {
         testHandler () { }
+      },
+      FootprintController: class FootprintController extends Controller {
+        create () { }
+        update () { }
       }
     },
     models: {
@@ -62,6 +71,9 @@ module.exports = _.defaultsDeep({
         require('trailpack-core')
       ]
     },
+    log: {
+      logger: new smokesignals.Logger('warn')
+    },
     policies: {
       TestController: {
         testHandler: [ 'TestPolicy.test' ]
@@ -76,5 +88,4 @@ module.exports = _.defaultsDeep({
     ]
   }
 }, smokesignals.FailsafeConfig)
-
 

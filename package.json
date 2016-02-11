@@ -17,6 +17,9 @@
     "trails",
     "trailjs"
   ],
+  "peerDependencies": {
+    "trailpack-router": "^1.0.0-beta-1"
+  },
   "dependencies": {
     "lodash": "^4.2.1",
     "trailpack": "latest"
@@ -26,9 +29,9 @@
     "eslint-config-trails": "^1.0.1",
     "mocha": "^2.3",
     "smokesignals": "^1.0.2",
-    "trailpack-core": "^1.0.0-alpha-3",
+    "trailpack-core": "^1.0.0-beta-1",
     "trailpack-router": "^1.0.0-beta-1",
-    "trails": "^1.0.0-alpha-8",
+    "trails": "^1.0.0-beta-1",
     "trails-controller": "^1.0.0-alpha-1",
     "trails-model": "^1.0.0-alpha-7",
     "trails-policy": "^1.0.0"
