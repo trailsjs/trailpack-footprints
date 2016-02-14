@@ -19,12 +19,5 @@ describe('lib.Util', () => {
       )
     })
   })
-
-  describe('#getControllerMantissa', () => {
-    it('should extract controller name from module name', () => {
-      assert.equal(lib.Util.getControllerMantissa('TestController'), 'test')
-    })
-  })
-
 })
 
