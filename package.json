@@ -1,6 +1,6 @@
 {
   "name": "trailpack-footprints",
-  "version": "1.0.0-beta-4",
+  "version": "1.0.0-beta-5",
   "description": "Footprints Trailpack",
   "homepage": "https://github.com/trailsjs/trailpack-footprints",
   "author": {
@@ -22,7 +22,7 @@
     "trailpack": "latest"
   },
   "devDependencies": {
-    "eslint": "^2.0.0-beta.1",
+    "eslint": "^2.5.0",
     "eslint-config-trails": "^1.0.1",
     "mocha": "^2.3",
     "smokesignals": "^1.0.2",
@@ -31,7 +31,7 @@
     "trails": "^1.0.0-beta-1",
     "trails-controller": "^1.0.0-alpha-1",
     "trails-model": "^1.0.0-alpha-7",
-    "trails-policy": "^1.0.0"
+    "trails-policy": "^1.0.1"
   },
   "bundledDependencies": [
     "trailpack"
