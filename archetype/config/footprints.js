@@ -64,5 +64,5 @@ module.exports = {
   /**
    * Prefix your footprint routes
    */
-  prefix: ''
+  prefix: '/api/v1'
 }
