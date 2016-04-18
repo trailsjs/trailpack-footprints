@@ -20,8 +20,8 @@ describe('lib.Util', () => {
       const footprints = lib.Util.getControllerFootprints(global.app)
 
       assert.equal(footprints.length, 1)
-      assert(_.find(footprints, { handler: 'TestController.testHandler' }))
-      assert(_.find(footprints, { path: '/test/testHandler' }))
+      assert(_.find(footprints, {handler: 'TestController.testHandler'}))
+      assert(_.find(footprints, {path: global.app.config.footprints.prefix + '/test/testHandler'}))
     })
 
     it('should return an empty array if controller footprint routes are disabled', () => {

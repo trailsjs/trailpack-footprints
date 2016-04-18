@@ -9,14 +9,14 @@ describe('Router Trailpack', () => {
     it('should include footprint routes (Controllers) in app.routes', () => {
       const routes = global.app.routes
 
-      assert.equal(routes.length, 3)
-      assert(_.find(routes, { path: '/test/testHandler' }))
+      assert.equal(routes.length, 4)
+      assert(_.find(routes, {path: global.app.config.footprints.prefix + '/test/testHandler'}))
     })
     it('should include footprint routes (Models) in app.routes', () => {
       const routes = global.app.routes
 
-      assert.equal(routes.length, 3)
-      assert(_.find(routes, { path: '/{model}', method: 'POST' }))
+      assert.equal(routes.length, 4)
+      assert(_.find(routes, {path: global.app.config.footprints.prefix + '/{model}', method: 'POST'}))
     })
     it('should bind route handler to controller method', () => {
       const routes = global.app.routes
@@ -26,7 +26,7 @@ describe('Router Trailpack', () => {
     it('should attach prerequisite methods', () => {
       const routes = global.app.routes
 
-      const configRoute = _.find(routes, { path: '/test/testHandler' })
+      const configRoute = _.find(routes, {path: global.app.config.footprints.prefix + '/test/testHandler'})
 
       assert(_.isFunction(configRoute.config.pre[0]))
     })
