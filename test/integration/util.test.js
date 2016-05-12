@@ -27,7 +27,7 @@ describe('lib.Util', () => {
     it('should return an empty array if controller footprint routes are disabled', () => {
       const footprintConfig = _.cloneDeep(global.app.config.footprints)
       footprintConfig.controllers = false
-      const footprints = lib.Util.getControllerFootprints({config:{footprints: footprintConfig}})
+      const footprints = lib.Util.getControllerFootprints({config: {footprints: footprintConfig}})
 
       assert.equal(footprints.length, 0)
     })
