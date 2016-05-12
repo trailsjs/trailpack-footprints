@@ -12,26 +12,29 @@
   "keywords": [
     "trailpack",
     "trails",
-    "trailjs"
+    "trailjs",
+    "footprints",
+    "rest",
+    "restfull"
   ],
   "peerDependencies": {
-    "trailpack-router": "^1.0.0-beta-1"
+    "trailpack-router": "^1.0.1"
   },
   "dependencies": {
-    "lodash": "^4.2.1",
-    "trailpack": "latest"
+    "lodash": "^4.12.0",
+    "trailpack": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^2.5.0",
-    "eslint-config-trails": "^1.0.1",
-    "mocha": "^2.3",
-    "smokesignals": "^1.0.2",
-    "trailpack-core": "^1.0.0-beta-1",
-    "trailpack-router": "^1.0.0-beta-1",
-    "trails": "^1.0.0-beta-1",
+    "eslint-config-trails": "^1.0.6",
+    "mocha": "^2.4.5",
+    "smokesignals": "^1.2.2",
+    "trailpack-core": "^1.0.0-beta-6",
+    "trailpack-router": "^1.0.1",
+    "trails": "^1.0.0",
     "trails-controller": "^1.0.0-alpha-1",
     "trails-model": "^1.0.0-alpha-7",
-    "trails-policy": "^1.0.1"
+    "trails-policy": "^1.0.2"
   },
   "bundledDependencies": [
     "trailpack"
