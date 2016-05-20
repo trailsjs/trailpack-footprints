@@ -15,7 +15,7 @@
     "trailjs",
     "footprints",
     "rest",
-    "restfull"
+    "restful"
   ],
   "peerDependencies": {
     "trailpack-router": "^1.0.1"
