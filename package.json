@@ -12,10 +12,13 @@
   "keywords": [
     "trailpack",
     "trails",
-    "trailjs"
+    "trailjs",
+    "footprints",
+    "rest",
+    "restful"
   ],
   "peerDependencies": {
-    "trailpack-router": "^1.0.0-beta-1"
+    "trailpack-router": "^1.0.1"
   },
   "dependencies": {
     "lodash": "^4.12.0",

@@ -18,24 +18,30 @@ module.exports = _.defaultsDeep({
     },
     policies: {
       TestPolicy: class TestPolicy extends Policy {
-        test () { }
+        test() {
+        }
       }
     },
     controllers: {
       TestController: class TestController extends Controller {
-        testHandler () { }
+        testHandler() {
+        }
       },
       FootprintController: class FootprintController extends Controller {
-        create () { }
-        update () { }
+        create() {
+        }
+
+        update() {
+        }
       }
     },
     models: {
       User: class User extends Model {
-        static config () {
-          return { }
+        static config() {
+          return {}
         }
-        static schema () {
+
+        static schema() {
           return {
             name: 'string',
             roles: {
@@ -46,12 +52,13 @@ module.exports = _.defaultsDeep({
         }
       },
       Role: class Role extends Model {
-        static config () {
+        static config() {
           return {
             store: 'storeoverride'
           }
         }
-        static schema () {
+
+        static schema() {
           return {
             name: 'string',
             user: {
@@ -63,6 +70,9 @@ module.exports = _.defaultsDeep({
     }
   },
   config: {
+    footprints: {
+      prefix: '/api/v1'
+    },
     main: {
       packs: [
         require('../../'),
@@ -76,7 +86,7 @@ module.exports = _.defaultsDeep({
     },
     policies: {
       TestController: {
-        testHandler: [ 'TestPolicy.test' ]
+        testHandler: ['TestPolicy.test']
       }
     },
     routes: [

@@ -40,8 +40,22 @@ module.exports = {
 module.exports = {
   /**
    * Generate routes for controller handlers.
+   * You can set controllers to true/false to enable/disable 
+   * automatic footprints routes globaly
    */
-  controllers: true,
+  controllers: {
+               
+     /**
+      * Default methods to accept for routes generated from controller handlers.
+      */
+     method: '*',
+  
+     /**
+      * List of controllers to ignore; that is, do not generate footprint routes
+      * for them.
+      */
+     ignore: [ ]
+   },
 
   /**
    * Generate conventional Create, Read, Update, and Delete (CRUD) routes for
