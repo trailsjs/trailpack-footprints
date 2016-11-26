@@ -53,9 +53,7 @@ module.exports = class FootprintsTrailpack extends Trailpack {
   configure () {
     const routerUtil = this.app.packs.router.util
     const controllerFootprints = lib.Util.getControllerFootprints(this.app)
-
     const modelFootprints = this.modelFootprints ? lib.Util.getModelFootprints(this.app) : []
-
     const footprintRoutes = _.union(controllerFootprints, modelFootprints)
 
     this.app.config.routes = routerUtil.mergeRoutes(footprintRoutes, this.app.config.routes)

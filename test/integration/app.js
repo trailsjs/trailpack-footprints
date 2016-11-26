@@ -81,7 +81,7 @@ module.exports = _.defaultsDeep({
       ]
     },
     log: {
-      logger: new smokesignals.Logger('warn')
+      logger: new smokesignals.Logger('debug')
     },
     policies: {
       TestController: {

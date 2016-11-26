@@ -1,3 +1,4 @@
+*.sw*
 /.idea
 node_modules
 coverage
