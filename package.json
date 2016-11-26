@@ -17,9 +17,6 @@
     "rest",
     "restful"
   ],
-  "peerDependencies": {
-    "trailpack-router": "^1.0.1"
-  },
   "dependencies": {
     "lodash": "^4.13.0",
     "trailpack": "^1.0.2"
@@ -36,9 +33,6 @@
     "trails-model": "^1.0.0-beta-2",
     "trails-policy": "^1.0.2"
   },
-  "bundledDependencies": [
-    "trailpack"
-  ],
   "scripts": {
     "test": "eslint . && mocha"
   },
