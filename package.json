@@ -20,14 +20,14 @@
   ],
   "dependencies": {
     "lodash": "^4.13.0",
-    "trailpack": "^1.0.2"
+    "trailpack": "v2-latest"
   },
   "devDependencies": {
     "eslint": "^2.11.1",
     "eslint-config-trails": "^2",
     "mocha": "^2.5",
-    "smokesignals": "^2",
-    "trailpack-router": "^2",
+    "smokesignals": "v2-latest",
+    "trailpack-router": "v2-latest",
     "trails": "v2-latest"
   },
   "scripts": {
@@ -40,5 +40,8 @@
     "extends": "trails"
   },
   "repository": "git@github.com:trailsjs/trailpack-footprints.git",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "tag": "next"
+  }
 }

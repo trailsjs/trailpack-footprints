@@ -76,7 +76,6 @@ module.exports = _.defaultsDeep({
     main: {
       packs: [
         require('../../'),
-        smokesignals.Trailpack,
         require('trailpack-router')
       ]
     },
