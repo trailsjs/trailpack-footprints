@@ -20,28 +20,22 @@
   ],
   "dependencies": {
     "lodash": "^4.13.0",
-    "trailpack": "v2-latest"
+    "trailpack": "latest"
   },
   "devDependencies": {
-    "eslint": "^2.11.1",
-    "eslint-config-trails": "^2",
-    "mocha": "^2.5",
-    "smokesignals": "v2-latest",
-    "trailpack-router": "v2-latest",
-    "trails": "v2-latest"
+    "eslint": "^3",
+    "eslint-config-trails": "^3",
+    "mocha": "^3.2",
+    "smokesignals": "next",
+    "trailpack-router": "latest",
+    "trails": "latest"
   },
   "scripts": {
     "test": "eslint . && mocha"
-  },
-  "engines": {
-    "node": ">= 4.0.0"
   },
   "eslintConfig": {
     "extends": "trails"
   },
   "repository": "git@github.com:trailsjs/trailpack-footprints.git",
-  "license": "MIT",
-  "publishConfig": {
-    "tag": "next"
-  }
+  "license": "MIT"
 }
