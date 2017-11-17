@@ -1,5 +1,3 @@
-'use strict'
-
 const _ = require('lodash')
 const Trailpack = require('trailpack')
 const lib = require('./lib')
@@ -51,12 +49,13 @@ module.exports = class FootprintsTrailpack extends Trailpack {
    *    Delete    | DELETE | /model/{id}/{child}/{id?}  | FootprintController.destroyAssociation
    */
   configure () {
-    const routerUtil = this.app.packs.router.util
     const controllerFootprints = lib.Util.getControllerFootprints(this.app)
     const modelFootprints = this.modelFootprints ? lib.Util.getModelFootprints(this.app) : []
     const footprintRoutes = _.union(controllerFootprints, modelFootprints)
 
-    this.app.config.routes = routerUtil.mergeRoutes(footprintRoutes, this.app.config.routes)
+    this.app.config.set('routes', [ ...footprintRoutes, ...this.app.config.get('routes') ])
+
+    console.log('config.routes', this.app.config.get('routes'))
   }
 
   constructor (app) {

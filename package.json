@@ -20,15 +20,17 @@
   ],
   "dependencies": {
     "lodash": "^4.13.0",
-    "trailpack": "latest"
+    "trailpack": "^3"
   },
   "devDependencies": {
     "eslint": "^3",
     "eslint-config-trails": "^3",
     "mocha": "^3.2",
-    "smokesignals": "next",
-    "trailpack-router": "latest",
-    "trails": "latest"
+    "smokesignals": "^3",
+    "trails": "^3"
+  },
+  "peerDependencies": {
+    "trailpack-router": "^3.1.2"
   },
   "scripts": {
     "test": "eslint . && mocha"

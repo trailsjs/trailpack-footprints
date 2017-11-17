@@ -19,6 +19,8 @@ describe('lib.Util', () => {
     it('should return controller footprint routes', () => {
       const footprints = lib.Util.getControllerFootprints(global.app)
 
+      console.log('footprints', footprints)
+
       assert.equal(footprints.length, 1)
       assert(_.find(footprints, {handler: 'TestController.testHandler'}))
       assert(_.find(footprints, {path: global.app.config.footprints.prefix + '/test/testHandler'}))
