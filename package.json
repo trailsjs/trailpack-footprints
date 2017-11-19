@@ -20,7 +20,8 @@
   ],
   "dependencies": {
     "lodash": "^4.13.0",
-    "trailpack": "^3"
+    "trailpack": "^3",
+    "trailpack-router": "^3.1.2"
   },
   "devDependencies": {
     "eslint": "^3",
