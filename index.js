@@ -54,8 +54,6 @@ module.exports = class FootprintsTrailpack extends Trailpack {
     const footprintRoutes = _.union(controllerFootprints, modelFootprints)
 
     this.app.config.set('routes', [ ...footprintRoutes, ...this.app.config.get('routes') ])
-
-    console.log('config.routes', this.app.config.get('routes'))
   }
 
   constructor (app) {
