@@ -1,5 +1,3 @@
-'use strict'
-
 const _ = require('lodash')
 const assert = require('assert')
 
@@ -25,8 +23,15 @@ describe('Router Trailpack', () => {
     })
     it('should attach prerequisite methods', () => {
       const routes = global.app.routes
+      const configRoute = routes.find(r => {
+        return (
+          r.path === global.app.config.footprints.prefix + '/test/testHandler' &&
+          r.method === 'GET'
+        )
+      })
 
-      const configRoute = _.find(routes, {path: global.app.config.footprints.prefix + '/test/testHandler'})
+      console.log('configRoute', configRoute)
+      console.log('app.routes', global.app.routes)
 
       assert(_.isFunction(configRoute.config.pre[0]))
     })

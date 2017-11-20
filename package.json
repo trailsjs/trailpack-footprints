@@ -1,6 +1,6 @@
 {
   "name": "trailpack-footprints",
-  "version": "2.0.0",
+  "version": "3.0.1",
   "description": "Footprints Trailpack",
   "homepage": "https://github.com/trailsjs/trailpack-footprints",
   "author": {
@@ -20,15 +20,18 @@
   ],
   "dependencies": {
     "lodash": "^4.13.0",
-    "trailpack": "latest"
+    "trailpack": "^3",
+    "trailpack-router": "^3.1.2"
   },
   "devDependencies": {
     "eslint": "^3",
     "eslint-config-trails": "^3",
     "mocha": "^3.2",
-    "smokesignals": "next",
-    "trailpack-router": "latest",
-    "trails": "latest"
+    "smokesignals": "^3",
+    "trails": "^3"
+  },
+  "peerDependencies": {
+    "trailpack-router": "^3.1.2"
   },
   "scripts": {
     "test": "eslint . && mocha"

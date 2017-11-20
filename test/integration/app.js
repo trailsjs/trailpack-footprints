@@ -1,10 +1,8 @@
-'use strict'
-
 const _ = require('lodash')
 const smokesignals = require('smokesignals')
-const Model = require('trails/model')
-const Controller = require('trails/controller')
-const Policy = require('trails/policy')
+const Model = require('trails/lib/Model')
+const Controller = require('trails/lib/Controller')
+const Policy = require('trails/lib/Policy')
 
 module.exports = _.defaultsDeep({
   pkg: {
@@ -82,16 +80,16 @@ module.exports = _.defaultsDeep({
     log: {
       logger: new smokesignals.Logger('debug')
     },
-    policies: {
-      TestController: {
-        testHandler: ['TestPolicy.test']
-      }
-    },
     routes: [
       {
         method: 'GET',
         path: '/test/testHandler',
-        handler: 'TestController.testHandler'
+        handler: 'TestController.testHandler',
+        config: {
+          pre: [
+            'TestPolicy.test'
+          ]
+        }
       }
     ]
   }
