@@ -13,11 +13,11 @@ module.exports = class FootprintsTrailpack extends Trailpack {
     this.modelFootprints = true
 
     if (!this.app.api.services.FootprintService) {
-      this.log.warn('trailpack-footprints is installed, but FootprintService is not provided')
+      this.app.logger.warn('trailpack-footprints is installed, but FootprintService is not provided')
       this.modelFootprints = false
     }
     if (!this.app.api.controllers.FootprintController) {
-      this.log.warn('trailpack-footprints is installed, but FootprintController is not provided')
+      this.app.logger.warn('trailpack-footprints is installed, but FootprintController is not provided')
       this.modelFootprints = false
     }
   }
